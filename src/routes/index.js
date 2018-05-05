@@ -1,3 +1,6 @@
+const dish = require('./dish');
+const user = require('./user');
+
 module.exports = [
   {
     path: '/ping',
@@ -6,4 +9,4 @@ module.exports = [
       response('pong').code(200);
     },
   },
-];
+].concat(dish, user);
