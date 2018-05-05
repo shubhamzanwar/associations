@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   users.associate = (models) => {
     // associations can be defined here
-    users.hasOne(models.dishes);
+    users.belongsTo(models.dishes, { foreignKey: 'dishId', as: 'dish' });
   };
   return users;
 };
