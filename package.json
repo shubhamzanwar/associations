@@ -18,7 +18,8 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "start": "node src/server.js"
   },
   "repository": {
     "type": "git",
