@@ -18,7 +18,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "jest --coverage",
+    "test": "NODE_ENV=test sequelize db:migrate:undo:all && NODE_ENV=test sequelize db:migrate && NODE_ENV=test jest --forceExit --runInBand --coverage",
     "start": "node src/server.js"
   },
   "repository": {
